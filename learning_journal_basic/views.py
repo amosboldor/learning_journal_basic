@@ -1,6 +1,17 @@
-from pyramid.view import view_config
+"""Views for pyramid."""
+
+from pyramid.response import Response
+import os
+
+HERE = os.path.dirname(__file__)
 
 
-@view_config(route_name='home', renderer='templates/mytemplate.pt')
-def my_view(request):
-    return {'project': 'learning_journal_basic'}
+def home_page(request):
+    """View for the home page."""
+    imported_text = open(os.path.join(HERE, "data/" 'sample.html')).read()
+    return Response(imported_text)
+
+
+def includeme(config):
+    """Include me function."""
+    config.add_view(home_page, route_name='home')
