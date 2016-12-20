@@ -1,2 +1,2 @@
-learning_journal_basic README
+learning_journal_basic
 =================
