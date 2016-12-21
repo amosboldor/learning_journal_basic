@@ -1,5 +1,4 @@
 Jinja2==2.8
--e git+https://github.com/amosboldor/learning_journal_basic.git@829e365e3f08e5259932d634f9e79ca768480597#egg=learning_journal_basic
 Mako==1.0.6
 MarkupSafe==0.23
 PasteDeploy==1.5.2
