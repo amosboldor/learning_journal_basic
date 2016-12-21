@@ -20,7 +20,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                  <li><a href="/">Home</a></li>
+                  <li class="active"><a href="/">Home</a></li>
                   <li><a href="/journal/new-entry">Create New Entry</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
@@ -29,16 +29,7 @@
             </div>
           </div>
         </nav>
-        <main class="container">
-            <div class="form-group">
-                <label for="Title">Title:</label>
-                <input class="form-control" rows="5" id="Title"></input>
-                <label for="Entry">Entry:</label>
-                <textarea class="form-control" rows="5" id="Entry"></textarea>
-            </div>
-              <button type="button" class="btn btn-primary">Save New Entry</button>
-              <a href="/"><button type="button" class="btn btn-default">Cancel</button></a>
-        </main>
+        {% block main %}{% endblock %}
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
