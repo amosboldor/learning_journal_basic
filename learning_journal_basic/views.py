@@ -6,10 +6,7 @@ ENTRIES = [
         "title": "It's Monday Dude",
         "id": 1,
         "published_on": "Dec 20, 2016",
-        "body": """Today we got to learn about the python framework pyramid and it was not that hard to setup just tedious.
-        We also had to implement a Deque and we imported double linked list to do this.
-        Today was easy compared to other days
-        """
+        "body": "Today we got to learn about the python framework pyramid and it was not that hard to setup just tedious. We also had to implement a Deque and we imported double linked list to do this. Today was easy compared to other days"
     },
     {
         "title": "It's Tuesday Dude",
@@ -35,9 +32,10 @@ def detail(request):
 @view_config(route_name="create", renderer="templates/new_post_form.jinja2")
 def create(request):
     """View for create page."""
-    return 'request'
+    return 'stuff'
 
 
-@view_config(route_name="update", renderer="template")
+@view_config(route_name="update", renderer="templates/edit_entry.jinja2")
 def update(request):
     """View for update page."""
+    return {"post": ENTRIES[int(request.matchdict['id']) - 1]}
