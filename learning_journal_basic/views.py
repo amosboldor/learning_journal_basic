@@ -12,10 +12,7 @@ ENTRIES = [
         "title": "It's Tuesday Dude",
         "id": 2,
         "published_on": "Dec 21, 2016",
-        "body": """Today I learned more about how routes work and we got to hock up the views to the routes a different way.
-I also learned how to use templates. One thing was very hard today was implementing binary heap.
-And one thing that bugged me was that I couldn’t run tests on my web because of some weird error.
-Today was hard but I didn’t feel like I wanted to pull my hair out."""
+        "body": "Today I learned more about how routes work and we got to hock up the views to the routes a different way. I also learned how to use templates. One thing was very hard today was implementing binary heap. And one thing that bugged me was that I couldn't run tests on my web because of some weird error. Today was hard but I didn't feel like I wanted to pull my hair out."
     }
 ]
 
@@ -32,10 +29,10 @@ def detail(request):
     return {"post": ENTRIES[int(request.matchdict['id']) - 1]}
 
 
-@view_config(route_name="create", renderer="templates/new_post_form.jinja2")
+@view_config(route_name="create", renderer="templates/new_entry.jinja2")
 def create(request):
     """View for create page."""
-    return 'stuff'
+    return {}
 
 
 @view_config(route_name="update", renderer="templates/edit_entry.jinja2")
